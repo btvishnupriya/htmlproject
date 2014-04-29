@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+#h2{
+	text-align: justify;
+	color: blue;
+}
+#h1{
+	color: fuchsia;
+	font-size: 20;
+    text-align: center;
+    font-family: Italic;
+}
+#b{
+	color: fuchsia;
+}
+#bt{
+	float: right;
+}
+.contact {
+	background-color:purple;
+}
+#details{
+	font-family: cursive;
+	color: lime;
+	text-align: center;
+	
+}
+#thanks{
+	color: red;
+}
+
