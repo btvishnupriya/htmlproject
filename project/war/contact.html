@@ -5,15 +5,103 @@
 <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 <title>Contact Us</title>
 </head>
-<body bgcolor="purple">
- <center><h3> For contact</h3></center>
+<body bgcolor="silver">
+<div >
+ <center><div  style="background-color:#FFA500;>
+ <h1 style="margin-bottom:0;"> FOR CONTACT</h1>
 <p id="details">MR.OWNER,<br>
 Dream House Constructors,<br>
 Dream House Estate,<br>
 Dream World.<br>
-phone no:9876543210</p>
+phone no:9876543210</p></center></div>
+<div>
+<marquee id="thanks" bgcolor="#FFF8DC">Feed Back Please</marquee></div>
+<br>
+<div id="menu" style="background-color:#FFD700;height:300px;width:800px;float:left;">
+<center><form name="form1" action="" onsubmit="return validateform()" >
+<table><tr>
+<td>NAME:</td>
+<td><input type="text" name="name" /></td>
+</tr>
+<tr>
+<td>phoneNO:</td>
+<td><input type="text" id="phoneno" name="phoneno"  /></td>
+</tr>
+<tr>
+<td>Email-id</td>
+<td><input type="text" name="email" title="enter email" value="" >
+ </td>
+</tr>
+<tr>
+<td>HAVE ENJOYED</td></tr>
+<tr>
+<td>YES<input type="radio" name="check1" value="yes" ></td>
+<td>NO<input type="radio" name="check2" value="no"></td>
+</tr>
+<tr><td>
+LEAVE YOUR COMMENTS</td>
+<td>
+<textarea rows="4" cols="50"></textarea></td></tr>
+<tr><td>
+<center><input type="submit" onclick="validateform()" value="submit"/></center></td>
+</tr></table>
+</form></center>
+</div>
+<br>
+<marquee id="thanks" >THANK YOU, HAVE A NICE DAY,VISIT AGAIN</marquee></div>
+<script>
 
-<marquee id="thanks">THANK YOU, HAVE A NICE DAY,VISIT AGAIN</marquee>
-<a href="page2.html"><label style="color:violet"><em>BACK</em></label></a>
+    function page3(){
+   window.location.href="page3.html";
+            }
+    
+    
+    function validateform(){
+    var name=document.form1.name.value;
+   var phoneno=document.form1.phoneno.value;
+ var x=document.form1.email.value;
+   var c1=document.form1.check1.checked == true;
+   var c2=document.form1.check2.checked == true;
+   var atpos=x.indexOf("@");
+    var dotpos=x.lastIndexOf(".");
+     
+    if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if((phoneno.length<10)||(phoneno.length>10)){  
+    	  alert("Phone number must be exactly 10");  
+    	  return false;  
+    	  } 
+
+   else if((atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length))
+    {
+    alert("Please enter valid mailid.");
+    return false;
+    }
+   else if((c1==false && c2==false)) 
+       { 
+	   alert("please enter ur enjoyment."); 
+	   return false;
+	   
+	   } 
+
+   else{
+	   alert ("completed successfully"+name);
+   	document.getElementById("demo").innerHTML = name;
+   	document.getElementById("demo1").innerHTML = phoneno;
+   	document.getElementById("demo2").innerHTML = x;
+        }
+    
+    }
+ 
+    
+    	 	      
+    </script>
+    <div id="test">
+<div><p id="demo" ></p>
+<p id="demo1" ></p>
+<p id="demo2" ></p></div></div>
+<div>
+ <input type="image" src="button1.jpg" alt="Submit" onclick="page3()"/><br></div>
 </body>
 </html>
