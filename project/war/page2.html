@@ -16,10 +16,21 @@
 <h2 style="color:violet"><em>DOUBLE BEDROOM FLATS</em></h2>
 <center><img  src="room2.jpg"/></center>
 <h2 style="color:violet"><em>VILLA</em></h2>
-<center><img  src="image3.jpg"></center>
-<a href="page3.html">
-<button>For More details</button></a>
-<a href="contact.html">
-<button id="bt">Contact US</button></a>
+<center><img  src="room1.jpg"></center>
+
+<script>
+function goBack()
+  {
+  window.location.href="page3.html";
+  }
+function contactUs()
+{
+window.location.href="contact.html";
+}
+ 
+</script>
+<button onclick="goBack()"> For More Details</button>
+
+<button id="bt" onclick="contactUs()">Contact US</button>
 </body>
 </html>
